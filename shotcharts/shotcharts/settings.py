@@ -55,7 +55,7 @@ ROOT_URLCONF = 'shotcharts.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['./charts/templates',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

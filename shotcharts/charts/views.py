@@ -5,6 +5,7 @@ import seaborn as sns
 import pandas as pd
 import nbashots as nba
 
+print(dir(plt))
 
 # Create your views here.
 def index(request):
@@ -15,6 +16,7 @@ def index(request):
   nba.shot_chart(curry_shots_df.LOC_X, curry_shots_df.LOC_Y, kind='hex', gridsize=100,
                 title="Stephen Curry FGA 2015-16 Season")
 
-  image = plt.show()
-  HttpResponse(render(image))
+  plt.savefig('test.png', dpi=200)
+
+  return render(request, 'index.html')
   
